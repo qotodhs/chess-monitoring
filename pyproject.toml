@@ -1,0 +1,19 @@
+[project]
+name = "chess-monitoring"
+version = "0.1.0"
+description = "CHESS cleanroom monitoring data collector"
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML>=6.0.1",
+    "requests>=2.31.0"
+]
+
+[project.scripts]
+chess-collector = "chess_monitoring.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
