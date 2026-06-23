@@ -1,0 +1,4 @@
+timestamp,co2_ppm,outdoor_co2_ppm,temperature_c,relative_humidity_pct,differential_pressure_pa,particle_count,damper_position_pct,fan_frequency_hz,fan_speed_pct,power_kw,energy_kwh,operation_mode,alarm_code
+2026-10-01T08:00:00+09:00,612,420,22.4,48.2,12.5,1800,15,36,60,12.4,10521.4,control,
+2026-10-01T09:00:00+09:00,742,420,22.6,49.1,12.2,2100,28,44,73,14.8,10536.2,control,
+2026-10-01T10:00:00+09:00,895,420,22.8,50.3,11.8,2600,52,52,87,18.2,10554.4,control,

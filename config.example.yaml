@@ -1,0 +1,37 @@
+site_id: SITE-A
+ahu_id: AHU-01
+interval_seconds: 60
+
+storage:
+  type: csv
+  path: data/chess_measurements.csv
+
+# 여러 데이터 소스를 동시에 붙일 수 있다.
+# 같은 필드가 중복되면 뒤에 선언된 source 값이 우선한다.
+sources:
+  - name: simulator
+    type: simulated
+    enabled: true
+
+  # HTTP 센서/게이트웨이 예시
+  # - name: edge-gateway
+  #   type: http
+  #   enabled: false
+  #   url: http://127.0.0.1:8080/api/v1/chess/latest
+  #   timeout_seconds: 5
+  #   field_map:
+  #     co2_ppm: co2
+  #     temperature_c: temperature
+  #     relative_humidity_pct: rh
+  #     differential_pressure_pa: pressure
+  #     particle_count: particles
+  #     damper_position_pct: damper
+  #     fan_frequency_hz: fan_hz
+  #     power_kw: power
+  #     energy_kwh: energy
+
+  # CSV 파일을 센서 대신 읽는 테스트/실증용 예시
+  # - name: csv-replay
+  #   type: csv_replay
+  #   enabled: false
+  #   path: data/sample_input.csv
